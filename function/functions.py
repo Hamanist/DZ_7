@@ -1,8 +1,8 @@
 import os
 import json
 
-PATH_STUDENTS = os.path.join("..", "data", "students.json")
-PATH_PROFESSION = os.path.join("..", "data", "professions.json")
+PATH_STUDENTS = os.path.join("data/students.json")
+PATH_PROFESSION = os.path.join("data/professions.json")
 
 
 def load_students(path):
@@ -61,3 +61,4 @@ def check_fitness(student, profession):
     no_know_the_skills = prof_skills ^ stud_skills
     suitability = int(len(knows_the_skills) / len(prof_skills) * 100)
     return knows_the_skills, no_know_the_skills, suitability
+
